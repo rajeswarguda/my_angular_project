@@ -1,0 +1,76 @@
+<br />
+<br />
+<h1 class="text-center bg-info bg-gradient">This is Databinding component</h1>
+<br />
+
+<h5>interpolation - My Name: {{name}}</h5>
+<h5>property Binding - My Name: <span [innerText]="name"></span></h5>
+<h5>property Binding - My Name: <span bind-innerText="name"></span></h5>
+
+Plain HTML : <input value="Rajeswar Guda" /> <br />
+
+1 way Interpolation : <input value={{name}} class="mx-1"> <br />
+1 way Property Binding : <input [value]="name" class="mx-1"> <br />
+1 way Property Binding : <input bind-value="name" class="mx-1"> <br />
+2 way: <input [(ngModel)]="name" class="mx-1" /> <br />
+
+
+UserId using two way <input type="text" [(ngModel)]="userId" on-change="userIdChanged()"
+    (ngModelChange)="onuserIdChanged($event)" class="mx-1" /><br />
+
+    <hr />
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDc55wdiqeWJrU_cW7qF4ikH_GrU_andtK-g&s" class="mx-1" />
+<img src={{img_src}} alt="" class="mx-1" />
+<img [src]="img_src" class="mx-1" />
+<img bind-src="img_src" class="mx-1" />
+<img [attr.src]="img_src" class="mx-1" /> <br />
+
+<hr />
+
+<button disabled="true" class="btn btn-primary mx-1">btn1</button>
+<button disabled={{btnFlag}} class="btn btn-primary mx-1">btn2</button>
+<button [disabled]="btnFlag" class="btn btn-primary mx-1">btn3</button>
+<button bind-disabled="btnFlag" class="btn btn-primary mx-1">btn4</button>
+<button (click)="toggleButton()" class="btn btn-primary mx-1">Toggle1</button>
+<button on-click="toggleButton()" class="btn btn-primary mx-1">Toggle2</button>
+<button (click)="changeDetails()" class="btn btn-primary mx-1">Update</button>
+
+<hr />
+<br />
+
+<h2 [hidden]="paragraphFlag">This is paragraph...</h2>
+<button (click)="toggleParagraph()" class="btn btn-primary mx-1">SHOW/HIDE</button>
+<button (click)="paragraphFlag = !paragraphFlag" class="btn btn-primary mx-1">SHOW/HIDE</button>
+<button (click)="paragraphFlag = !paragraphFlag" class="btn btn-primary mx-1">{{paragraphFlag ? "SHOW" : "HIDE"}}</button>
+
+<hr />
+<br />
+
+<textarea maxlength="100" [(ngModel)]="textAreaMsg"></textarea> <br/>
+<div>Remaining characters {{100 - textAreaMsg.length}}</div>
+
+<hr />
+<br />
+
+<select [(ngModel)]="selectedState">
+    <option>Select State</option>
+    <option>Telangana</option>
+    <option>Andhra Pradesh</option>
+    <option>Karnataka</option>
+    <option>Kerala</option>
+    <option>Tamilnadu</option>
+</select>
+
+<h5>Slected state name : {{selectedState}}</h5>
+
+<hr />
+
+<h6>Calculator</h6>
+<input #num1 /> <br />
+<input #num2 /> <br />
+
+<button (click)="add(num1.value, num2.value)">Add</button>
+
+<br />
+<br />

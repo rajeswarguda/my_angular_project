@@ -1,0 +1,15 @@
+
+<button (click)="menu = 1" class="btn btn-dark mx-1">Databinding</button>
+<button (click)="menu = 2" class="btn btn-dark mx-1">Directives</button>
+<button (click)="menu = 3" class="btn btn-dark mx-1">Directives Assignment1</button>
+
+@switch (menu) {
+@case (1) {<app-databinding></app-databinding>}
+@case (2) {<app-directives></app-directives>}
+@case (3) {<app-directives-assignment1></app-directives-assignment1>}
+
+@default {<h5>This Body Page</h5>}
+
+}
+
+<br />

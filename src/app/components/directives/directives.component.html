@@ -1,0 +1,96 @@
+<h1 class="text-center bg-info bg-gradient">This is Directives component</h1>
+
+<hr>
+
+<!-- Before Angular 17 -->
+Before angular 17
+<h3 *ngIf="num%2 == 0 ">{{num}} is Even</h3>
+<h3 *ngIf="num%2 != 0 ">{{num}} is Odd</h3>
+
+<!-- After Angular 17 -->
+After angular 17
+@if (num%2 == 0) {
+<h3>{{num}} is Even</h3>
+}@else {
+<h3>{{num}} is Odd</h3>
+}
+
+<input type="text" [(ngModel)]="num" class="mx-1" />
+
+<hr>
+<br />
+
+<h4> Day Number - {{dayNumber}}</h4>
+
+<!-- Before Angular 17 -->
+Before angular 17
+
+<div [ngSwitch]="dayNumber">
+    <div *ngSwitchCase="0">Sunday</div>
+    <div *ngSwitchCase="1">Monday</div>
+    <div *ngSwitchCase="1">Tuesday</div>
+    <div *ngSwitchCase="1">Wednessday</div>
+    <div *ngSwitchCase="1">Thursday</div>
+    <div *ngSwitchCase="1">Fiday</div>
+    <div *ngSwitchCase="1">Satureday</div>
+</div>
+
+<!-- After Angular 17 -->
+After angular 17
+
+@switch (dayNumber) {
+@case (0) {<h3>Sunday</h3>}
+@case (1) {<h3>Monday</h3>}
+@case (2) {<h3>Tuesday</h3>}
+@case (3) {<h3>Wednessday</h3>}
+@case (4) {<h3>Thursday</h3>}
+@case (5) {<h3>Fiday</h3>}
+@case (6) {<h3>Satureday</h3>}
+@default {<h3>default</h3>}
+}
+
+<hr>
+<br />
+
+<!-- Before Angular 17 -->
+
+<h5 *ngFor="let car of cars">{{car}}</h5>
+
+<button (click)="addCars()" class="btn btn-primary mx-1">AddCars</button>
+
+<!-- After Angular 17 -->
+
+@for (car of cars; track car; let i = $index) {
+<h4>{{car}} ---- {{i}}</h4>
+}@empty {
+no cars available
+}
+
+<h5 class="text-center">Employee table</h5>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <td>Id</td>
+            <td>Name</td>
+            <td>Phone</td>
+        </tr>
+    </thead>
+    <tbody>
+        @for (emp of employees; track emp.name) {
+        <tr>
+            <td>{{emp.eid}}</td>
+            <td>{{emp.name}}</td>
+            <td>{{emp.phone}}</td>
+        <tr>
+            } @empty {
+            No Employees available
+            }
+    </tbody>
+
+</table>
+
+<button (click)="addEmployees()" class="btn btn-primary mx-1">Add Employess</button>
+<button (click)="updateEmployees()" class="btn btn-primary mx-1">Update Employess</button>
+
+<br />
