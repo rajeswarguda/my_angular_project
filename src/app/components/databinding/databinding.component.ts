@@ -45,8 +45,8 @@ export class DatabindingComponent {
     this.paragraphFlag = !this.paragraphFlag;
   }
 
-  add(a,b){
-    alert(Number(a)+Number(b));
-  }
+  // add(a,b){
+  //   alert(Number(a)+Number(b));
+  // }
 
 }
