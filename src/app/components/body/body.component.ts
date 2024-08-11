@@ -5,16 +5,18 @@ import { DirectivesAssignment1Component } from "../directives-assignment1/direct
 import { PaginationAssignementComponent } from "../pagination-assignement/pagination-assignement.component";
 import { EmployeeCRUDComponent } from "../employee-crud/employee-crud.component";
 import { PipesdemoComponent } from "../pipesdemo/pipesdemo.component";
+import { PipesComponent } from "../pipes/pipes.component";
+import { ParentComponent } from "../parent/parent.component";
 
 @Component({
   selector: 'app-body',
   standalone: true,
-  imports: [DatabindingComponent, DirectivesComponent, DirectivesAssignment1Component, PaginationAssignementComponent, EmployeeCRUDComponent, PipesdemoComponent],
+  imports: [DatabindingComponent, DirectivesComponent, DirectivesAssignment1Component, PaginationAssignementComponent, EmployeeCRUDComponent, PipesdemoComponent, PipesComponent, ParentComponent],
   templateUrl: './body.component.html',
   styleUrl: './body.component.css'
 })
 export class BodyComponent {
 
-  menu: number = 6;
+  menu: number = 60;
 
 }
