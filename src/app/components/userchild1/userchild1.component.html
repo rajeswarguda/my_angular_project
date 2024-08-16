@@ -1,0 +1,25 @@
+<h4 class="text-center">users child1</h4>
+
+<table class="table"> 
+    <thead>
+        <tr>
+            <td>id</td>
+            <td>name</td>
+            <td>age</td>
+            <td>email</td>
+            <td></td>
+        </tr>
+    </thead>
+    <tbody>
+        @for (user of childUsers; track $index) {
+        <tr>
+            <td>{{user.id}}</td>
+            <td>{{user.name}}</td>
+            <td>{{user.age}}</td>
+            <td>{{user.email}}</td>
+            <td><button (click)="deleteUser(user.id)">Delete</button></td>
+        </tr>
+        }
+    </tbody>
+
+</table>

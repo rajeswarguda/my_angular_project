@@ -1,0 +1,23 @@
+<div class="container border text-center">
+    <div class="row">
+        <div class="col">
+            <h4 class="text-center">users Parent</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6 border">
+            <app-userchild1 [childUsers]="userList" (deleteEvent)="deleteUser($event)"></app-userchild1>
+        </div>
+        <div class="col-sm-6 border">
+            <app-userchild2 (addEvent)="addUser($event)"></app-userchild2>
+        </div>
+    </div>
+</div>
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />

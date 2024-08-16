@@ -7,11 +7,12 @@ import { EmployeeCRUDComponent } from "../employee-crud/employee-crud.component"
 import { PipesdemoComponent } from "../pipesdemo/pipesdemo.component";
 import { PipesComponent } from "../pipes/pipes.component";
 import { ParentComponent } from "../parent/parent.component";
+import { UserparentComponent } from "../userparent/userparent.component";
 
 @Component({
   selector: 'app-body',
   standalone: true,
-  imports: [DatabindingComponent, DirectivesComponent, DirectivesAssignment1Component, PaginationAssignementComponent, EmployeeCRUDComponent, PipesdemoComponent, PipesComponent, ParentComponent],
+  imports: [DatabindingComponent, DirectivesComponent, DirectivesAssignment1Component, PaginationAssignementComponent, EmployeeCRUDComponent, PipesdemoComponent, PipesComponent, ParentComponent, UserparentComponent],
   templateUrl: './body.component.html',
   styleUrl: './body.component.css'
 })
