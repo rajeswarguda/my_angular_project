@@ -1,0 +1,70 @@
+{
+    "employees": [
+        {
+            "id": 1,
+            "firstName": "Sai",
+            "lastName": "Kumar",
+            "gender": "male",
+            "email": "111@gmail.com",
+            "contactNumber": "1111111",
+            "dob": "28/01/1967",
+            "salary": 1000,
+            "address": "Address1"
+        },
+        {
+            "id": 2,
+            "firstName": "Seeta",
+            "lastName": "",
+            "gender": "female",
+            "email": "222@gmail.com",
+            "contactNumber": "22222222",
+            "dob": "28/01/1987",
+            "salary": 2000,
+            "address": "Address2"
+        },
+        {
+            "id": 3,
+            "firstName": "Rama",
+            "lastName": "Krishna",
+            "gender": "male",
+            "email": "333@gmail.com",
+            "contactNumber": "333333333",
+            "dob": "28/01/2001",
+            "salary": 3000,
+            "address": "Address3"
+        },
+        {
+            "id": 4,
+            "firstName": "Laxmi",
+            "lastName": "G",
+            "gender": "male",
+            "email": "444@gmail.com",
+            "contactNumber": "4444444",
+            "dob": "28/01/2000",
+            "salary": 4000,
+            "address": "Address4"
+        },
+        {
+            "id": 5,
+            "firstName": "Raj",
+            "lastName": "G",
+            "gender": "male",
+            "email": "555@gmail.com",
+            "contactNumber": "55555555",
+            "dob": "28/01/1990",
+            "salary": 5000,
+            "address": "Address5"
+        },
+        {
+            "id": 6,
+            "firstName": "Aadya",
+            "lastName": "Aadya",
+            "gender": "female",
+            "email": "666@gmail.com",
+            "contactNumber": "6666666666",
+            "dob": "28/01/2023",
+            "salary": 6000,
+            "address": "Address6"
+        }
+    ]
+}

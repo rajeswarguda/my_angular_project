@@ -1,0 +1,43 @@
+
+<button (click)="fetchAllEmployees()" class="btn btn-dark mx-2">All Employees</button>
+<button (click)="fetchFilteredEmployees('female')" class="btn btn-dark mx-2">Female Employees</button>
+<button (click)="fetchFilteredEmployees('male')" class="btn btn-dark mx-2">Male Employees</button>
+
+<h3 class="text-center">Employees Table</h3>
+
+@if (employees != null) {
+<table class="table table-striped table-bordered border-secondary">
+    <thead>
+        <tr class="fw-bold">
+            <td>id</td>
+            <td>firstName</td>
+            <td>lastName</td>
+            <td>gender</td>
+            <td>email</td>
+            <td>contactNumber</td>
+            <td>dob</td>
+            <td>salary</td>
+            <td>address</td>
+        </tr>
+    </thead>
+    <tbody>
+        @for (emp of employees; track emp.id) {
+        <tr>
+            <td>{{emp.id}}</td>
+            <td>{{emp.firstName}}</td>
+            <td>{{emp.lastName}}</td>
+            <td>{{emp.gender}}</td>
+            <td>{{emp.email}}</td>
+            <td>{{emp.contactNumber}}</td>
+            <td>{{emp.dob}}</td>
+            <td>{{emp.salary}}</td>
+            <td>{{emp.address}}</td>
+        </tr>
+        }
+    </tbody>
+
+</table>
+}@else{
+    employees list is empty
+}
+

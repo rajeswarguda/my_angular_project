@@ -1,0 +1,26 @@
+<h5 class="text-center">Employee Subject Demo2 component</h5>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <td>Id</td>
+            <td>Name</td>
+            <td>sal</td>
+            <td></td>
+        </tr>
+    </thead>
+    <tbody>
+        @for (emp of employees; track emp.name) {
+        <tr>
+            <td>{{emp.id}}</td>
+            <td>{{emp.name}}</td>
+            <td>{{emp.sal}}</td>
+            <td>
+                <button (click)="deleteEmp(emp.id)" class="btn btn-primary mx-1">Delete</button>
+            </td>
+        <tr>
+            } @empty {
+            No Employees available
+            }
+    </tbody>
+</table>
