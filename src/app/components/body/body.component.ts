@@ -14,11 +14,12 @@ import { EmpSubjectDemo1Component } from "../emp-subject-demo1/emp-subject-demo1
 import { EmpSubjectDemo2Component } from "../emp-subject-demo2/emp-subject-demo2.component";
 import { EmpSubjectDemo3Component } from "../emp-subject-demo3/emp-subject-demo3.component";
 import { EmployeevalidationComponent } from "../employeevalidation/employeevalidation.component";
+import { FormmodeldrivenComponent } from "../formmodeldriven/formmodeldriven.component";
 
 @Component({
   selector: 'app-body',
   standalone: true,
-  imports: [DatabindingComponent, DirectivesComponent, DirectivesAssignment1Component, PaginationAssignementComponent, EmployeeCRUDComponent, PipesdemoComponent, PipesComponent, ParentComponent, UserparentComponent, EmployeeComponent, UserdemoComponent, EmpSubjectDemo1Component, EmpSubjectDemo2Component, EmpSubjectDemo3Component, EmployeevalidationComponent],
+  imports: [DatabindingComponent, DirectivesComponent, DirectivesAssignment1Component, PaginationAssignementComponent, EmployeeCRUDComponent, PipesdemoComponent, PipesComponent, ParentComponent, UserparentComponent, EmployeeComponent, UserdemoComponent, EmpSubjectDemo1Component, EmpSubjectDemo2Component, EmpSubjectDemo3Component, EmployeevalidationComponent, FormmodeldrivenComponent],
   templateUrl: './body.component.html',
   styleUrl: './body.component.css'
 })
