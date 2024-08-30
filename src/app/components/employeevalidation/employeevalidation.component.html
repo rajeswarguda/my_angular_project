@@ -1,0 +1,53 @@
+<h2 class="text-center">Template Form</h2>
+
+<div class="col-sm-6 offset-3 border p-2">
+    <form #myForm="ngForm" (submit)="submitMyForm(myForm)">
+        <p>
+            First Name: <input name="firstName" #fname="ngModel" required minlength="5" ngModel />
+            <span *ngIf="fname.dirty && fname.hasError('required')" class="text-danger m-2">FirstName is Required</span>
+            <span *ngIf="fname.dirty && fname?.errors?.['minlength']" class="text-danger m-2">minimum 5 characters
+            </span>
+        </p>
+
+        <p>
+            Last Name: <input name="lastName" #lName="ngModel" required ngModel />
+            <span *ngIf="lName.dirty && lName.hasError('required')"
+                class="text-danger m-2">lastName is Required</span>
+        </p>
+        <p>Email: <input name="email" minlength="5" required type="email" ngModel /></p>
+        <fieldset ngModelGroup="address">
+            <p>City: <input name="city" #city="ngModel" ngModel /></p>
+            <p>State: <select name="state" #state="ngModel" ngModel>
+                    <option value="Select">Select</option>
+                    <option value="Telangana">Telangana</option>
+                    <option value="AP">AP</option>
+                    <option value="Karnataka">Karnataka</option>
+                    <option value="Tamilnadu">Tamilnadu</option>
+                    <option value="Kerala">Kerala</option>
+                </select>
+            </p>
+
+            <p>pincode: <input name="pincode" #pincode="ngModel" ngModel required maxlength="6" /></p>
+            <span *ngIf="pincode.dirty && pincode.hasError('required')" class="text-danger m-2">pincode is
+                Required</span>
+            <span *ngIf="pincode.dirty && pincode?.errors?.['maxlength']" class="text-danger m-2">maximum 10
+                characters</span>
+        </fieldset>
+
+        <p>Comments: <textarea name="comments" #comments="ngModel" ngModel required maxlength="10"
+                minlength="3"></textarea> </p>
+        <span *ngIf="comments.dirty && comments.hasError('required')" class="text-danger m-2">FirstName is
+            Required</span>
+        <span *ngIf="comments.dirty && comments?.errors?.['minlength']" class="text-danger m-2">minimum 3
+            characters</span>
+        <span *ngIf="comments.dirty && comments?.errors?.['maxlength']" class="text-danger m-2">maximum 10
+            characters</span>
+
+        <br />
+        <input type="submit" value="Submit" class="m-1 btn btn-primary" [disabled]="myForm.invalid">
+        <input type="reset" value="Reset" class="btn btn-secondary">
+    </form>
+
+    <pre>{{myForm.status}}</pre>
+    <pre>{{myForm.value | json}}</pre>
+</div>
