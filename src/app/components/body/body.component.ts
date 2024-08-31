@@ -17,6 +17,7 @@ import { EmployeevalidationComponent } from "../employeevalidation/employeevalid
 import { TemplateDrivenFormComponent } from "../form/template-driven-form/template-driven-form.component";
 import { ReactiveFormComponent } from "../form/reactive-form/reactive-form.component";
 import { ReactiveFormDynamicComponent } from "../form/reactive-form-dynamic/reactive-form-dynamic.component";
+import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-body',
@@ -24,7 +25,7 @@ import { ReactiveFormDynamicComponent } from "../form/reactive-form-dynamic/reac
   imports: [DatabindingComponent, DirectivesComponent, DirectivesAssignment1Component, PaginationAssignementComponent,
     EmployeeCRUDComponent, PipesdemoComponent, PipesComponent, ParentComponent, UserparentComponent,
     EmployeeComponent, UserdemoComponent, EmpSubjectDemo1Component, EmpSubjectDemo2Component,
-    EmpSubjectDemo3Component, EmployeevalidationComponent, TemplateDrivenFormComponent, ReactiveFormComponent, ReactiveFormDynamicComponent],
+    EmpSubjectDemo3Component, EmployeevalidationComponent, TemplateDrivenFormComponent, ReactiveFormComponent, ReactiveFormDynamicComponent, RouterOutlet],
   templateUrl: './body.component.html',
   styleUrl: './body.component.css'
 })
