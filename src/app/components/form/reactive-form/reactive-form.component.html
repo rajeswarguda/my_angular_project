@@ -1,0 +1,81 @@
+<h3 class="text-center">Model-Driven / Reactive Form</h3>
+
+<div class="col-sm-5 offset-4 border p-2">
+    <form [formGroup]="registerForm" (submit)="submitMyForm(registerForm)">
+        <p>
+            First name:
+            <input formControlName="firstname">
+            <span class="text-danger mx-2" *ngIf="registerForm.controls['firstname'].dirty 
+                && registerForm.controls['firstname'].hasError('required')">
+                firstname is required
+            </span>
+            <span class="text-danger mx-2" *ngIf="registerForm.controls['firstname'].dirty
+                && registerForm.controls['firstname'].hasError('minlength')">
+                firstname minLength is 5
+            </span>
+        </p>
+
+        <p>
+            Last name:
+            <input formControlName="lastname">
+        </p>
+
+        <p>
+            Email:
+            <input formControlName="email">
+            <span class="text-danger mx-2" *ngIf="registerForm.controls['email'].dirty
+            && registerForm.controls['email'].hasError('required')">
+                email is required
+            </span>
+            <span class="text-danger mx-2" *ngIf="registerForm.controls['email'].dirty
+            && registerForm.controls['email'].hasError('email')">
+                Invalid email
+            </span>
+            <span class="text-danger mx-2"
+                *ngIf="registerForm.controls['email'].dirty && registerForm.controls['email'].hasError('userExists')">User
+                already exists</span>
+
+        </p>
+
+        <p>
+            DOB:
+            <input formControlName="dob">
+        </p>
+
+        <p>
+            Age:
+            <input formControlName="age">
+            <span class="text-danger mx-2"
+                *ngIf="registerForm.controls['age'].dirty && registerForm.controls['age'].hasError('required')">age
+                is required</span>
+            <span class="text-danger mx-2"
+                *ngIf="registerForm.controls['age'].dirty && registerForm.controls['age'].hasError('pattern')">age
+                is invalid</span>
+            <span class="text-danger mx-2"
+                *ngIf="registerForm.controls['age'].dirty && registerForm.controls['age'].hasError('ageRange')">age
+                should be b/w 17 and 40</span>
+        </p>
+
+        <fieldset formGroupName="address">
+            <p>
+                City:
+                <input formControlName="city">
+            </p>
+            <p>
+                state:
+                <input formControlName="state">
+            </p>
+            <p>
+                PIN:
+                <input formControlName="pin">
+            </p>
+        </fieldset>
+
+        <input type="submit" value="Submit" />
+        <input type="reset" value="Clear" />
+    </form>
+
+    <pre>
+        {{registerForm.value | json}}
+    </pre>
+</div>

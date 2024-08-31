@@ -1,0 +1,60 @@
+<h2 class="text-center">Employee Form</h2>
+
+<div class="col-sm-6 offset-3 border p-2">
+
+    <form #myForm="ngForm" (submit)="submitMyForm(myForm)">
+        <p>
+            First Name: <input name="firstName" #fname="ngModel" required minlength="5" ngModel [(ngModel)]='firstName' />
+            <span *ngIf="fname.dirty && fname?.errors?.['required']" class="text-danger m-2">FirstName is
+                Required</span>
+            <span *ngIf="fname.dirty && fname?.errors?.['minlength']" class="text-danger m-2">FirstName minimum length
+                is 5</span>
+        </p>
+
+        <p>
+            Last Name: <input name="lastName" #lName="ngModel" ngModel minlength="2" />
+            <span *ngIf="lName.dirty && lName?.errors?.['minlength']" class="text-danger m-2">Last Name minimum length
+                is 2</span>
+        </p>
+
+        <p>
+            Email: <input name="email" type="email" #email="ngModel" ngModel required email />
+            <span *ngIf="email.dirty && email?.errors?.['required']" class="text-danger m-2">Email is required</span>
+            <span *ngIf="email.dirty && email?.errors?.['email']" class="text-danger m-2">Invalid email</span>
+        </p>
+
+        <p>
+            DOB: <input name="dob" type="date" #dob="ngModel" ngModel required />
+            <span *ngIf="dob.dirty && dob?.errors?.['required']" class="text-danger m-2">DOB is required</span>
+        </p>
+
+        <fieldset ngModelGroup="address">
+            <p>City: <input name="city" #city="ngModel" ngModel required /></p>
+            <p>State:
+                <select name="state" #state="ngModel" ngModel required>
+                    <option value=""></option>
+                    <option>Telangana</option>
+                    <option>Andhra Pradesh</option>
+                    <option>Karnataka</option>
+                    <option>Kerala</option>
+                    <option>Tamilnadu</option>
+                </select>
+                <span *ngIf="state.dirty && state?.errors?.['required']" class="text-danger m-2">state is required</span>
+
+
+            </p>
+            <p>pincode: <input name="pincode" #pincode="ngModel" ngModel required pattern="[0-9]*" />
+                <span *ngIf="pincode.dirty && pincode?.errors?.['required']" class="text-danger m-2">pincode is required</span>
+                <span *ngIf="pincode.dirty && pincode?.errors?.['pattern']" class="text-danger m-2">Invalid
+                    pincode</span>
+            </p>
+        </fieldset>
+
+        <input type="submit" value="Submit" class="m-1 btn btn-primary" [disabled]="myForm.invalid">
+        <input type="reset" value="Reset" class="btn btn-secondary">
+
+    </form>
+
+    <pre>{{myForm.status}}</pre>
+    <pre>{{myForm.value | json}}</pre>
+</div>

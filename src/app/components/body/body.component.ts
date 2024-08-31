@@ -14,12 +14,17 @@ import { EmpSubjectDemo1Component } from "../emp-subject-demo1/emp-subject-demo1
 import { EmpSubjectDemo2Component } from "../emp-subject-demo2/emp-subject-demo2.component";
 import { EmpSubjectDemo3Component } from "../emp-subject-demo3/emp-subject-demo3.component";
 import { EmployeevalidationComponent } from "../employeevalidation/employeevalidation.component";
-import { FormmodeldrivenComponent } from "../formmodeldriven/formmodeldriven.component";
+import { TemplateDrivenFormComponent } from "../form/template-driven-form/template-driven-form.component";
+import { ReactiveFormComponent } from "../form/reactive-form/reactive-form.component";
+import { ReactiveFormDynamicComponent } from "../form/reactive-form-dynamic/reactive-form-dynamic.component";
 
 @Component({
   selector: 'app-body',
   standalone: true,
-  imports: [DatabindingComponent, DirectivesComponent, DirectivesAssignment1Component, PaginationAssignementComponent, EmployeeCRUDComponent, PipesdemoComponent, PipesComponent, ParentComponent, UserparentComponent, EmployeeComponent, UserdemoComponent, EmpSubjectDemo1Component, EmpSubjectDemo2Component, EmpSubjectDemo3Component, EmployeevalidationComponent, FormmodeldrivenComponent],
+  imports: [DatabindingComponent, DirectivesComponent, DirectivesAssignment1Component, PaginationAssignementComponent,
+    EmployeeCRUDComponent, PipesdemoComponent, PipesComponent, ParentComponent, UserparentComponent,
+    EmployeeComponent, UserdemoComponent, EmpSubjectDemo1Component, EmpSubjectDemo2Component,
+    EmpSubjectDemo3Component, EmployeevalidationComponent, TemplateDrivenFormComponent, ReactiveFormComponent, ReactiveFormDynamicComponent],
   templateUrl: './body.component.html',
   styleUrl: './body.component.css'
 })

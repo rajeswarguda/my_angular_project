@@ -1,15 +1,17 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { FormArray, FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { FormGroup, FormBuilder, FormArray, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'app-formmodeldriven',
+  selector: 'app-reactive-form-dynamic',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],
-  templateUrl: './formmodeldriven.component.html',
-  styleUrl: './formmodeldriven.component.css'
+  imports: [ReactiveFormsModule, CommonModule],
+  templateUrl: './reactive-form-dynamic.component.html',
+  styleUrl: './reactive-form-dynamic.component.css'
 })
-export class FormmodeldrivenComponent {
+export class ReactiveFormDynamicComponent {
+
+  
 
   empForm!: FormGroup;
 

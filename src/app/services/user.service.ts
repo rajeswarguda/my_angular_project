@@ -19,4 +19,8 @@ export class UserService {
       })
     );
   }
+
+  findUserByEmail(email: string) {
+    return this.httpClient.get(`https://jsonplaceholder.typicode.com/users?email=${email}`)
+  }
 }
