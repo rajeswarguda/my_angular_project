@@ -1,1 +1,19 @@
-<p>careers works!</p>
+<h4 class="text-center">THis is Careers Component</h4>
+<h5>This content is common for both the child routes</h5>
+<div class="container border">
+    <div class="row">
+        <div class="col-sm-3 border">
+            <div class="m-2">
+                <a routerLink="permanent">Permanent Jobs</a>
+            </div>
+            <div class="m-2">
+                <a routerLink="contract">Contract Jobs</a>
+            </div>
+        </div>
+        <div class="col-sm-9 border">
+           <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>
+
+<button class="btn btn-primary" (click)="goBack()">Back</button>
